@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:300&display=swap");
+/* body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} */
+body{
+    background: url("bgimage.webp") no-repeat  ;
+    background-size: cover;
+   
+    font-family: "Rajdhani", sans-serif; 
+    margin: 0;
+  padding: 0;
+}
+
+
+.glass {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  /* -webkit-clip-path: inset(10em);
+          clip-path: inset(10em); */
+  filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.drop-shadow {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop-shadow::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 10em;
+  height: calc(100% - 20em);
+  width: calc(100% - 20em);
+  border-top: 2px solid rgba(225, 225, 225, 0.2);
+  border-left: 1px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.3);
+  z-index: 2;
+}
+.drop-shadow > span {
+  position: absolute;
+  z-index: 5;
+  color: white;
+  font-size: 4em;
+  letter-spacing: 0.50em;
+  padding-left: 0.375em;
+}
+
+@media (max-width: 980px) {
+  .glass {
+    -webkit-clip-path: inset(5em);
+            clip-path: inset(5em);
+  }
+
+  .drop-shadow::before {
+    top: 5em;
+    width: calc(100% - 10em);
+  }
+  .drop-shadow > span {
+    font-size: 4em;
+  }
+}
+@media (max-width: 640px) {
+  .drop-shadow > span {
+    font-size: 2em;
+  }
+}
+
+
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100vw;
+    height: 75vh;
+    position: absolute;
+    margin-top: 10%;
+  } 
+  
+  .card {
+    /* backdrop-filter: blur(5px); */
+    max-width: 40vh;
+    height: 55vh;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.051),
+      0px 0px 7.2px rgba(0, 0, 0, 0.073), 0px 0px 13.6px rgba(0, 0, 0, 0.09),
+      0px 0px 24.3px rgba(0, 0, 0, 0.107), 0px 0px 45.5px rgba(0, 0, 0, 0.129),
+      0px 0px 109px rgba(0, 0, 0, 0.18);
+
+  }
+  
+  .glare-container {
+    width: 100%;
+    height: 100%; 
+    /* overflow: hidden; */
+    position: relative;
+  }
+  
+  
+  /* .card{
+    transition: all 0.3s ease;
+  } 
+
+.card :hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgb(18, 17, 17);
+}*/
+
+  .card{
+    border-radius: 20px;
+ padding: 5px;
+ box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+ background-image: linear-gradient(144deg,#af40ff2e, #5a42f343 50%,#00dbeb4f);
+  }
+  .card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgb(18, 17, 17);
+    transition: all 0.7s ease;
+}
+  h2{
+    color:aqua;
+    font-size:200%; 
+    text-align: center;
+
+    border: 2px white dotted;
+    border-radius: 10px;
+
+  }
+
+  .wrapper{
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 80vh;
+  }
+
+
+/******************/
+  #apple,
+  #twitter,
+  #github,
+  #facebook {
+    font-size: 5em;
+    background-color: #18191f;
+    color: #fff;
+    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+      2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+      inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+      inset 2px 2px 10px #00000080;
+    border-radius: 29px;
+    padding: 11px 19px;
+    margin: 0 40px;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+      0 0 200px #0072ff;
+  }
+  #twitter {
+    animation-delay: 0.3s;
+  }
+  #facebook {
+    animation-delay: 0.7s;
+  }
+  #github {
+    animation-delay: 0.1s;
+  }
+  
+  @keyframes animate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+.footer{
+    margin: 0;
+    margin-top :20%;
+    padding: 0;
+    display:flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0%;
+    margin-bottom: 0%;
+
+    
+
+  }
+  p{
+    color : white;
+    font-size: 150%;
+    font-weight: 500;
+    text-align: center;
+  }
+  .p{
+    padding: 20px;
+  }
